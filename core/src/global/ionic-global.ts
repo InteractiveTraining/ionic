@@ -13,7 +13,8 @@ const Ionic = (win as any)['Ionic'] = (win as any)['Ionic'] || {};
 // queue used to coordinate DOM reads and
 // write in order to avoid layout thrashing
 Object.defineProperty(Ionic, 'queue', {
-  get: () => Context['queue']
+  get: () => Context['queue'],
+  configurable: true
 });
 
 // Setup platforms
